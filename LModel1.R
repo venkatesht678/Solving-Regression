@@ -26,7 +26,7 @@ summary(testClean)
 # Improving model performance by using linear Regression
 train$Pclass2 <- train$Pclass^2
 testClean$Pclass2 <- testClean$Pclass^2
-model <- lm (Survived ~ Pclass2*Pclass2+Pclass*Sex*Sex*Sex*Age*SibSp*Parch , data = train_clean)
+model <- lm (Survived ~ Pclass2*Pclass2+Pclass*Sex*Sex*Sex*Age*SibSp*Parch , data = train)
 find <- predict(model ,testClean)
 summary(model)
 
